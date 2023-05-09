@@ -1,6 +1,6 @@
 import React, { useEffect,useState } from 'react';
 import { Container, Row, Col, Card } from "react-bootstrap";
-import axios from '../api/axios';
+import axios from '../api/axios.jsx';
 import { Table } from 'react-bootstrap';
 
 
@@ -23,8 +23,6 @@ function Dashboard() {
         console.log(error)
         localStorage.clear()
       }
-
-
   }, [])
 
   return (
