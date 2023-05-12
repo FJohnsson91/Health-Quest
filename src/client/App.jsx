@@ -17,7 +17,7 @@ import UserActivityTable from './pages/userActivity';
 
 export default function App() {
   const navigate = useNavigate();
-  const {setAuth } = useAuth();
+  const { setAuth } = useAuth();
 
 
 
@@ -40,7 +40,7 @@ export default function App() {
       console.log(error)
       localStorage.clear()
     }
-    
+
 
 
 
