@@ -13,7 +13,6 @@ const profileRouter = require('./routes/api/auth')
 const activityRouter = require('./routes/activity')
 const dashRouter = require('./routes/dashboardData')
 const userRouter = require('./routes/users')
-const homePage = require('../client/pages/Home')
 
 app.use(cors());
 // Connect to MongoDB database
@@ -32,7 +31,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
 app.get('/', (req, res) => {
-    res.render(homePage);
+    res.send('Welcome to HealthQuest Server!');
 });
 
 app.use('/api', loginRouter);
