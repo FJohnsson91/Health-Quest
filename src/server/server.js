@@ -32,8 +32,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
 app.get('/*', (req, res) => {
-    res.redirect(302, `${req.protocol}://${req.hostname}:5173${req.path}`);
-});
+    const targetServiceHostname = 'health-quest-ntqs.onrender.com';
+    res.redirect(302, `${req.protocol}://${targetServiceHostname}${req.path}`);
+})
 
 app.use('/api', loginRouter);
 app.use('/api', registerRouter);
