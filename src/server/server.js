@@ -31,8 +31,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
 app.get('/*', (req, res) => {
-    res.redirect(302, 'http://localhost:5173' + req.path);
+    res.redirect(302, `http://${req.hostname}:5173${req.path}`);
 });
+
 
 app.use('/api', loginRouter);
 app.use('/api', registerRouter);
