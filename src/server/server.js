@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
+app.enable('trust proxy');  // Trust the X-Forwarded-* headers
 const PORT = 5000;
 const cors = require('cors');
 const env = require('dotenv');
@@ -31,9 +32,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
 app.get('/*', (req, res) => {
-    res.redirect(302, `http://${req.hostname}:5173${req.path}`);
+    res.redirect(302, `${req.protocol}://${req.hostname}:5173${req.path}`);
 });
-
 
 app.use('/api', loginRouter);
 app.use('/api', registerRouter);
