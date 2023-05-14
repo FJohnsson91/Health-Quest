@@ -30,8 +30,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
-app.get('/', (req, res) => {
-    res.send('Welcome to HealthQuest Server!');
+app.get('/*', (req, res) => {
+    res.redirect(302, 'http://localhost:5173' + req.path);
 });
 
 app.use('/api', loginRouter);
