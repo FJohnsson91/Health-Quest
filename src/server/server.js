@@ -1,8 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const path = require('path');
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const cors = require('cors');
 const env = require('dotenv');
 env.config();
@@ -15,6 +16,7 @@ const dashRouter = require('./routes/dashboardData')
 const userRouter = require('./routes/users')
 
 app.use(cors());
+
 // Connect to MongoDB database
 mongoose.connect(process.env.CONNECTION_URL, {
     useNewUrlParser: true,
@@ -29,18 +31,21 @@ mongoose.connect(process.env.CONNECTION_URL, {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Routes
-/*app.get('/*', (req, res) => {
-    const targetServiceHostname = 'health-quest-ntqs.onrender.com';
-    res.redirect(302, `${req.protocol}://${targetServiceHostname}${req.path}`);
-})*/
+// Serve static files from the Vite app
+app.use(express.static(path.join(__dirname, '../../dist')));
 
+// Routes
 app.use('/api', loginRouter);
 app.use('/api', registerRouter);
 app.use('/api', profileRouter);
 app.use('/api', activityRouter);
 app.use('/api', dashRouter);
 app.use('/api', userRouter);
+
+// The "catchall" handler: for any request that doesn't match one above, send back Vite's index.html file.
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../dist', 'index.html'));
+});
 
 // Start server
 app.listen(PORT, () => {
