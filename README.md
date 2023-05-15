@@ -9,6 +9,13 @@
 
 ##
 
+### We used Vite to get the project started and get a good platform to go from.
+### React as a framework for frontend development.
+### JavaScript for backend development.
+### MongoDB to store user information.
+
+##
+
 ### To run this application from GitHub Repo:
 ### npm install (To install necessary dependencies)
 ### npm run dev (To run the application)
