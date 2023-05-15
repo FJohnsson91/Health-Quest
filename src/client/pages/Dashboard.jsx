@@ -32,7 +32,7 @@ function Dashboard() {
       <h1 style={{ color: 'white', marginLeft: '5px' }}>Welcome, {auth?.user?.username}!</h1>
       <Row>
         <Col md={8} lg={6}>
-          <Card bg="dark" text="light">
+          <Card text="light" style={{backgroundColor: "#444343e1", marginBottom: "10px"}}> 
             <Card.Body>
               <Card.Title>Total Activity Taken</Card.Title>
               <Card.Text style={{ fontSize: "5rem" }}>{dashData?.activitiesTaken}</Card.Text>
@@ -55,7 +55,7 @@ function Dashboard() {
               <h3 className='brand mt-4'>My Activity History</h3>
             </Col>
           </Row>
-          <Table responsive>
+          <Table responsive style={{borderTopStyle: "none"}}>
             <thead>
               <tr className='brand' style={{color: "white"}}>
                 <th>Activity Name</th>

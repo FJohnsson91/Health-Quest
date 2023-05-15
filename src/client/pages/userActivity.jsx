@@ -42,12 +42,12 @@ const UserActivityTable = () => {
                 <tbody>
                     {activities.map((activity) => (
                         <tr key={activity._id} className="brand">
-                            <td>{activity.activity}</td>
-                            <td>{activity.points}</td>
-                            <td>{activity.duration}</td>
+                            <td style={{color: "white"}}>{activity.activity}</td>
+                            <td style={{color: "white"}}>{activity.points}</td>
+                            <td style={{color: "white"}}>{activity.duration} min</td>
                             <td className="w-25">
-                                <Button variant="outline-warning" onClick={() => handleShowModal(activity)}>
-                                    View Activity
+                                <Button variant="outline-secondary" onClick={() => handleShowModal(activity)} style={{color: "#2EF273"}}>
+                                    Start
                                 </Button>{' '}
                                 
                             </td>

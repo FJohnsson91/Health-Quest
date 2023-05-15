@@ -24,7 +24,7 @@ function NavigationMenu() {
   return (
     <>
 
-      <Navbar style={{ backgroundColor: '#232323', boxShadow: "1px 5px 8px rgb(0 0 0 / 0.2)", height: '4rem' }}>
+      <Navbar style={{ backgroundColor: '#232323', boxShadow: "1px 5px 8px rgb(0 0 0 / 0.2)", height: '4rem', marginBottom: "50px" }}>
         <Container>
 
 
