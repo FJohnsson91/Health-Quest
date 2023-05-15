@@ -91,7 +91,7 @@ const AdminUsersView = () => {
     return (
         <div className="brand container">
             <div className="d-flex mt-4 justify-content-between align-items-center mb-4 container">
-                <h2 className="brand">Users</h2>
+                <h2 className="brand">All Current Users</h2>
                 <Button variant="outline-secondary" onClick={() => handleShowModal(null,"create")}>
                     <span className='brand'>Add User</span>
                 </Button>
@@ -99,7 +99,7 @@ const AdminUsersView = () => {
             <Table className="brand bordered">
                 <thead>
                     <tr className="brand">
-                        <th>User Name</th>
+                        <th>Username</th>
                         <th>Points</th>
                         <th>Total Activity Taken</th>
                         <th>Role</th>
@@ -109,16 +109,17 @@ const AdminUsersView = () => {
                 <tbody>
                     {users?.map((user) => (
                         <tr key={user._id} className="brand">
-                            <td>{user.username}</td>
-                            <td>{user.points ? user.points : 0}</td>
-                            <td className="w-25">{user.activityCount}</td>
-                            <td>{user.role}</td>
+                            <td style={{color: "white"}}>{user.username}</td>
+                            <td style={{color: "white"}}>{user.points ? user.points : 0}</td>
+                            <td style={{color: "white"}} className="w-25">{user.activityCount}</td>
+                            <td style={{color: "white"}}>{user.role}</td>
                             <td className="w-25">
                                 <Button
                                     variant="outline-secondary"
                                     size="sm"
                                     className="me-2"
                                     onClick={() => handleShowModal(user,"edit")}
+                                    style={{minWidth: "90px", marginBottom: "2px", marginTop: "2px"}}
                                 >
                                     <span className='brand'>Add Points</span>
                                 </Button>
@@ -127,6 +128,7 @@ const AdminUsersView = () => {
                                     size="sm"
                                     className="me-2"
                                     onClick={() => handleShowModal(user,"edit")}
+                                    style={{minWidth: "90px", marginBottom: "2px", marginTop: "2px"}}
                                 >
                                     Edit
                                 </Button>
@@ -134,6 +136,7 @@ const AdminUsersView = () => {
                                     variant="outline-danger"
                                     size="sm"
                                     onClick={() => handleDeleteUser(user)}
+                                    style={{minWidth: "90px", marginBottom: "2px", marginTop: "2px"}}
                                 >
                                     Delete
                                 </Button>:null}

@@ -69,11 +69,11 @@ useEffect(() => {
             <h1 className="text-center mb-4 mt-4 brand">Login To HealthQuest</h1>
             <p ref={errRef} className={errMsg ? "errmsg" : "offscreen" } aria-live="assertive">{errMsg}</p>
             <Form.Group controlId="formEmail">
-              <Form.Label className='brand'>Email address</Form.Label>
+              <Form.Label className='brand'>Username</Form.Label>
               <Form.Control
                 type="text"
                 ref={userRef}
-                placeholder="Enter User Name"
+                placeholder="Username"
                 value={userName}
                 onChange={(event) => setUserName(event.target.value)}
               />

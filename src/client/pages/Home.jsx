@@ -12,7 +12,7 @@ const Home = () => {
       <Container>
         <Row className="mt-5">
           <Col>
-            <h1>Welcome to Health Quest</h1>
+            <h1>Welcome to HealthQuest</h1>
             <p className="lead" style={{color: "white"}}>Join us on a journey towards a healthier life</p>
           </Col>
         </Row>

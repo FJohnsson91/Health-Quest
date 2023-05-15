@@ -97,14 +97,14 @@ const ActivityTable = () => {
                 <tbody>
                     {activities.map((activity) => (
                         <tr key={activity._id} className="brand">
-                            <td>{activity.activity}</td>
-                            <td>{activity.points}</td>
-                            <td>{activity.duration}</td>
+                            <td style={{color: "white"}}>{activity.activity}</td>
+                            <td style={{color: "white"}}>{activity.points}</td>
+                            <td style={{color: "white"}}>{activity.duration}</td>
                             <td className="w-25">
-                                <Button variant="outline-warning" onClick={() => handleShowModal(activity, "Edit")}>
+                                <Button variant="outline-warning" onClick={() => handleShowModal(activity, "Edit")} style={{minWidth: "100px", marginBottom: "2px", marginTop: "2px"}}>
                                     Edit
                                 </Button>{' '}
-                                <Button variant="outline-danger" onClick={() => handleDelete(activity._id)}>
+                                <Button variant="outline-danger" onClick={() => handleDelete(activity._id)} style={{minWidth: "100px", marginBottom: "2px", marginTop: "2px"}}>
                                     Delete
                                 </Button>
                             </td>

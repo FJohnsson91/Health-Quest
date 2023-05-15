@@ -99,13 +99,13 @@ const Registration = () => {
                 <h1 className="text-center mb-4 mt-4 brand">Register</h1>
                 <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
                 <Form.Group controlId="formEmail">
-                  <Form.Label className='brand'>User Name
+                  <Form.Label className='brand'>Username
                     <FontAwesomeIcon icon={faCheck} className={validName ? "valid" : "hide"} />
                     <FontAwesomeIcon icon={faTimes} className={validName || !user ? "hide" : "invalid"} />
                   </Form.Label>
                   <Form.Control
                     type="text"
-                    placeholder="Enter User Name"
+                    placeholder="Username"
                     ref={userRef}
                     value={user}
                     onChange={(event) => setUser(event.target.value)}
@@ -146,13 +146,13 @@ const Registration = () => {
                   </p>
                 </Form.Group>
                 <Form.Group controlId="formPassword">
-                  <Form.Label className='brand mt-3'>ReType Password
+                  <Form.Label className='brand mt-3'>Confirm Password
                     <FontAwesomeIcon icon={faCheck} className={validMatch && matchPwd ? "valid" : "hide"} />
                     <FontAwesomeIcon icon={faTimes} className={validMatch || !matchPwd ? "hide" : "invalid"} />
                   </Form.Label>
                   <Form.Control
                     type="password"
-                    placeholder="re-enter Password"
+                    placeholder="Confirm Password"
                     value={matchPwd}
                     onChange={(event) => setMatchPwd(event.target.value)}
                     aria-invalid={validMatch ? "false" : "true"}
