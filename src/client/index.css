@@ -11,6 +11,7 @@ table,tr,td,td{
 }
 .brand{
   color: #2EF273;
+  font-weight: bold;
   /* font-size: 50px; */
   /* font-family: Arial, Helvetica, sans-serif; */
 }

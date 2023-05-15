@@ -13,22 +13,29 @@ const Home = () => {
         <Row className="mt-5">
           <Col>
             <h1>Welcome to Health Quest</h1>
-            <p className="lead">Join us on a journey towards a healthier life</p>
+            <p className="lead" style={{color: "white"}}>Join us on a journey towards a healthier life</p>
           </Col>
         </Row>
         <Row className="mt-5">
           <Col>
             <h2>About Us</h2>
-            <p>
-              Health Quest is a community of health enthusiasts who are dedicated to achieve their
-              health goals. We offer a variety of Quests.
+            <p style={{color: "white"}}>
+            <span style={{color: "#2EF273",fontWeight: "bold"}}>David Carces:</span> Frontend, Information and Communication
+              <br /><br />
+              <span style={{color: "#2EF273",fontWeight: "bold"}}>Ludvig Jenisch:</span> Frontend
+              <br /><br />
+              <span style={{color: "#2EF273",fontWeight: "bold"}}>Fredrik Johnsson:</span> Backend
+              <br /><br />
+              <span style={{color: "#2EF273",fontWeight: "bold"}}>Emil Vernersson Jacobsson:</span> Backend
+              <br /><br />
+              <span style={{color: "#2EF273",fontWeight: "bold"}}>Alfred Stührenberg:</span> Frontend
             </p>
           </Col>
         </Row>
         <Row className="mt-5">
           <Col>
             <h2>Contact Us</h2>
-            <p>
+            <p style={{color: "white"}}>
               If you have any questions or would like to learn more about our services, please feel free to
               contact us at info@healthquest.com.
             </p>

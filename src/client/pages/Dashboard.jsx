@@ -57,7 +57,7 @@ function Dashboard() {
           </Row>
           <Table responsive>
             <thead>
-              <tr className='brand'>
+              <tr className='brand' style={{color: "white"}}>
                 <th>Activity Name</th>
                 <th>Points Earned</th>
                 <th>Date Taken</th>
@@ -66,15 +66,15 @@ function Dashboard() {
             <tbody>
               {dashData?.activityTaken?.map((activity, i) => (
                 <tr key={activity._id} className='brand'>
-                  <td>{activity.activity.activity}</td>
-                  <td>{activity.activity.points}</td>
-                  <td>{new Date(activity.timestamp).toLocaleString()}</td>
+                  <td style={{color: "white"}}>{activity.activity.activity}</td>
+                  <td style={{color: "white"}}>{activity.activity.points}</td>
+                  <td style={{color: "white"}}>{new Date(activity.timestamp).toLocaleString()}</td>
                 </tr>
               ))}
             </tbody>
             <tfoot>
               <tr>
-                <td colSpan="3" className='brand'>Total Points Earned: {dashData?.totalPoints}</td>
+                <td colSpan="3" className='brand' style={{color: "white"}}>Total Points Earned: {dashData?.totalPoints}</td>
               </tr>
             </tfoot>
           </Table>
