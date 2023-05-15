@@ -62,7 +62,7 @@ const TakeActivityModal = ({ selectedActivity, show, handleClose }) => {
                     <Modal.Title className='brand'>{selectedActivity?.activity}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className='brand bg-dark'>
-                    <p>Reward Points: {selectedActivity?.points}</p>
+                    <p>Reward: {selectedActivity?.points} points.</p>
                     <p>Duration: {selectedActivity?.duration} minutes</p>
                     {isTimerStarted && <p>Time remaining: {timeRemaining} seconds</p>}
 

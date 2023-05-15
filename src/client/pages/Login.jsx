@@ -66,7 +66,7 @@ useEffect(() => {
       <Row className="justify-content-center">
         <Col md={4}>
           <Form onSubmit={handleLogin}>
-            <h1 className="text-center mb-4 mt-4 brand">Login To HealthQuest</h1>
+            <h1 className="text-center mb-4 mt-4 brand">Login</h1>
             <p ref={errRef} className={errMsg ? "errmsg" : "offscreen" } aria-live="assertive">{errMsg}</p>
             <Form.Group controlId="formEmail">
               <Form.Label className='brand'>Username</Form.Label>

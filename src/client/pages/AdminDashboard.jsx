@@ -58,16 +58,16 @@ function AdminDashboard() {
     </Row>
     <Row>
       <Col>
-        <h3 className='brand mt-4'>Latest Activities By Our Users</h3>
+        <h3 className='brand mt-4'>Most Recent Activites</h3>
       </Col>
     </Row>
     <Table responsive>
       <thead>
         <tr className="brand">
-          <th>Activity Name</th>
-          <th>User Name</th>
+          <th>Activity</th>
+          <th>Username</th>
           <th>Points Earned</th>
-          <th>Date Taken</th>
+          <th>Date Completed</th>
         </tr>
       </thead>
       <tbody>

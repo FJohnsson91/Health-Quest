@@ -36,7 +36,7 @@ const UserActivityTable = () => {
                         <th>Activity</th>
                         <th>Points</th>
                         <th>Duration</th>
-                        <th>Actions</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>

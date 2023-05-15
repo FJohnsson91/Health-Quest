@@ -34,7 +34,7 @@ function Dashboard() {
         <Col md={8} lg={6}>
           <Card text="light" style={{backgroundColor: "#444343e1", marginBottom: "10px"}}> 
             <Card.Body>
-              <Card.Title>Total Activity Taken</Card.Title>
+              <Card.Title>Total Activities Completed</Card.Title>
               <Card.Text style={{ fontSize: "5rem" }}>{dashData?.activitiesTaken}</Card.Text>
             </Card.Body>
           </Card>
@@ -58,9 +58,9 @@ function Dashboard() {
           <Table responsive style={{borderTopStyle: "none"}}>
             <thead>
               <tr className='brand' style={{color: "white"}}>
-                <th>Activity Name</th>
+                <th>Activity</th>
                 <th>Points Earned</th>
-                <th>Date Taken</th>
+                <th>Date Completed</th>
               </tr>
             </thead>
             <tbody>

@@ -101,7 +101,7 @@ const AdminUsersView = () => {
                     <tr className="brand">
                         <th>Username</th>
                         <th>Points</th>
-                        <th>Total Activity Taken</th>
+                        <th>Total Activities completed</th>
                         <th>Role</th>
                         <th>Actions</th>
                     </tr>
