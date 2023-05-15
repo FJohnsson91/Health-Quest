@@ -52,7 +52,7 @@ function Dashboard() {
         <Col>
           <Row>
             <Col>
-              <h3 className='brand mt-4'>My Activity History</h3>
+              <h3 className='brand mt-4'>My History</h3>
             </Col>
           </Row>
           <Table responsive style={{borderTopStyle: "none"}}>

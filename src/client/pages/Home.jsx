@@ -20,6 +20,8 @@ const Home = () => {
           <Col>
             <h2>About Us</h2>
             <p style={{color: "white"}}>
+            <span style={{color: "#2EF273",fontWeight: "bold"}}>Team Name:</span> HealthQuest Devs
+              <br /><br />
             <span style={{color: "#2EF273",fontWeight: "bold"}}>David Carces:</span> Frontend, Information and Communication
               <br /><br />
               <span style={{color: "#2EF273",fontWeight: "bold"}}>Ludvig Jenisch:</span> Frontend
