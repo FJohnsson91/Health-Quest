@@ -29,7 +29,7 @@ function Dashboard() {
 
   return (
     <Container fluid className='brand mt-4'>
-      <h1 style={{ color: 'white' }}>Welcome, {auth?.user?.username}!</h1>
+      <h1 style={{ color: 'white', marginLeft: '5px' }}>Welcome, {auth?.user?.username}!</h1>
       <Row>
         <Col md={8} lg={6}>
           <Card bg="dark" text="light">
